@@ -1,31 +1,144 @@
-tittle{
-	color: #ffffe0;
-    font-size: 500%;
-    margin-top: 500px;
-    margin-bottom: 460px;
-    margin-right: 460px;
-    margin-left: 460px;
+body {
+  background-color: #ffde63; /* rose plus pâle que la barre */
+  color: #fbc600;
+  font-family: 'Cursive', 'Georgia', serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
-p{
-	color: #ffead9;
-	font-size: 250%;
-    display: block;
-    margin: auto;
-    width: 50%;
+.top-bar {
+  background-color: #ffffff;
+  padding: 15px px;
+  border-radius: 50px;
+  width: 60%;
+  display: flex;
+  border: 5px dashed #fbc600;
+  gap: 20px;
+  justify-content: center;
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.6);
+  z-index: 100;
+  height: 70px;
+  align-items: center;
+  overflow: visible;
+  
+  /* ✅ PROPRIÉTÉS POUR BARRE FIXE */
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%); /* ✅ centre parfaitement la barre */
 }
 
-img{
-	display: block;
-  margin: auto;
-  width: 50%;
-  margin-bottom: 200px;
+.top-bar a:hover {
+  background-color: #ffffff;
+  color: #ffffff;
+  overflow: initial;
+  box-shadow: inset 0 -3px 5px rgba(251, 198, 0, 0.6);
+  font-family: "Coiny", system-ui;
+}
+
+.bar-image {
+  position: absolute;
+  bottom: 30px;
+  right: 20px; /* ✅ place BunBun à droite de la barre */
+  top: -80px;   /* ✅ dépasse vers le haut */
+  width: 200px; /* ✅ taille personnalisée */
+  height: auto;
+  z-index: 200;
+  pointer-events: none; /* ✅ facultatif : empêche de cliquer sur l’image */
+}
+
+
+/* ✅ CONTENU CENTRÉ EN DESSOUS */
+.main-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 40px 60px 40px;
+  text-align: center;
+}
+
+/* ✅ Nouveau fond blanc autour du bloc de trahison */
+.texte-bloc {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 8 50px rgba(255, 255, 255, 1.0);
+  margin: 50px auto;
   margin-top: 200px;
-  margin-bottom: 200px;
-  margin-right: 200px
-  margin-left: 200px;
+  max-width: 700px;
 }
 
-body{
-	background-image: linear-gradient(to right, red , yellow);
+h1 {
+  font-size: 3em;
+  font-family: "Coiny", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 150px:;
+  color: #fbc600;
+  text-shadow: 1px 1px #ffde63;
+  margin-top: 150px;
 }
+
+h2 {
+  font-size: 1.8em;
+  color: #ffde63;
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+
+p {
+  font-size: 1.5em;
+  line-height: 1.6;
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(255, 222, 99, 0.6);
+  margin: 20px auto;
+  color: #ffde63;
+}
+
+img {
+  margin-top: 20px;
+  border-radius: 25px;
+}
+
+.mini {
+  width: 100%;
+  max-width: 400px;
+  margin: 1000px auto;
+  border-radius: 20px;
+}
+
+h3{
+  margin-top: 1000px;
+}
+
+.decoration {
+  position: absolute;
+  font-size: 40px; /* augmenté pour mieux voir */
+  opacity: 1; /* changé de 0.6 à 1 */
+  color: #fbc600;
+  animation: float 3s ease-in-out infinite;
+  z-index: 9999;
+}
+
+        
+.star1 { top: 15%; left: 10%; animation-delay: 0s; }
+.star2 { top: 25%; right: 15%; animation-delay: 1s; }
+.star3 { top: 60%; left: 5%; animation-delay: 2s; }
+.star4 { top: 80%; right: 20%; animation-delay: 0.5s; }
+.heart1 { top: 35%; left: 85%; animation-delay: 1.5s; }
+.heart2 { top: 70%; right: 10%; animation-delay: 2.5s; }
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+.star1 { top: 15%; left: 10%; animation-delay: 0s; }
+.star2 { top: 25%; right: 15%; animation-delay: 1s; }
+.star3 { top: 60%; left: 5%; animation-delay: 2s; }
+.star4 { top: 80%; right: 20%; animation-delay: 0.5s; }
+.heart1 { top: 35%; left: 85%; animation-delay: 1.5s; }
+.heart2 { top: 70%; right: 10%; animation-delay: 2.5s; }
