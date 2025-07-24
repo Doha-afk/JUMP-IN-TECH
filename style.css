@@ -9,11 +9,12 @@ body {
 
 .top-bar {
   background-color: #ffffff;
-  padding: 15px px;
+  padding: 20px px;
   border-radius: 50px;
   width: 60%;
   display: flex;
   border: 5px dashed #fbc600;
+  border-color: #fbc600;
   gap: 20px;
   justify-content: center;
   box-shadow: 0 8px 30px rgba(255, 255, 255, 0.6);
@@ -24,24 +25,28 @@ body {
   
   /* ✅ PROPRIÉTÉS POUR BARRE FIXE */
   position: fixed;
-  top: 20px;
+  top: 15px;
   left: 50%;
+  color: #c1f2b0;
+  font-display: block;
+  font-family: "Coiny", system-ui;
   transform: translateX(-50%); /* ✅ centre parfaitement la barre */
 }
 
-.top-bar a:hover {
-  background-color: #ffffff;
-  color: #ffffff;
-  overflow: initial;
-  box-shadow: inset 0 -3px 5px rgba(251, 198, 0, 0.6);
-  font-family: "Coiny", system-ui;
+.top-bar a {
+  background-color: #c1f2b0; /* si vous souhaitez garder le fond */
+  border: 2px solid #78ce53; /* bordure visible */
+  padding: 5px 10px; /* espace autour du texte pour la bordure */
+  border-radius: 8px; /* pour un rendu arrondi */
+  color: #ffffff; /* couleur du texte */
+  text-decoration: none; /* pour supprimer le soulignement si nécessaire */
 }
 
 .bar-image {
   position: absolute;
   bottom: 30px;
-  right: 20px; /* ✅ place BunBun à droite de la barre */
-  top: -80px;   /* ✅ dépasse vers le haut */
+  right: -30px; /* ✅ place BunBun à droite de la barre */
+  top: -70px;   /* ✅ dépasse vers le haut */
   width: 200px; /* ✅ taille personnalisée */
   height: auto;
   z-index: 200;
@@ -55,18 +60,55 @@ body {
   margin: 0 auto;
   padding: 30px 40px 60px 40px;
   text-align: center;
+  padding-top: 90px; /* Ajuste selon la hauteur exacte de ton header */
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: center;
 }
 
 /* ✅ Nouveau fond blanc autour du bloc de trahison */
 .texte-bloc {
   background: #ffffff;
+  position: relative;
   padding: 30px;
   border-radius: 30px;
-  box-shadow: 0 8 50px rgba(255, 255, 255, 1.0);
+  box-shadow: 0 8 50px  ;
   margin: 50px auto;
   margin-top: 200px;
   max-width: 700px;
+  border: dashed 5px;
+  border-color: #fbc600;
 }
+
+.bunbun-top {
+  position: absolute;
+  top: 350px;
+  right: 655px;
+  align-items: center; /* ✅ place BunBun à droite de la barre */   /* ✅ dépasse vers le haut */
+  width: 200px; /* ✅ taille personnalisée */
+  height: auto;
+  z-index: 900;
+  pointer-events: none; /* ✅ facultatif : empêche de cliquer sur l’image */
+}
+
+.custom-header {
+  background: initial;
+  position: fixed;       /* FIXE en haut */
+  top: 0px;                /* en haut de la page */
+  left: 90;
+  width: 100%;           /* toute la largeur */
+  background-color: #feffca; /* même vert */
+  border: 5px dashed #c1f2b0; /* même bordure */
+  padding: 50px 100px;
+  color: #fff;
+  text-align: center; 
+  font-family: 'Coiny', cursive;
+  z-index: 1;         /* devant tout */
+  box-sizing: border-box; /* inclut bordure dans largeur */
+}
+
 
 h1 {
   font-size: 3em;
@@ -81,7 +123,7 @@ h1 {
 
 h2 {
   font-size: 1.8em;
-  color: #ffde63;
+  color: #c1f2b0;
   margin-top: 100px;
   margin-bottom: 150px;
 }
@@ -92,14 +134,15 @@ p {
   background: #fff;
   border-radius: 20px;
   padding: 20px;
-  box-shadow: 0 0 15px rgba(255, 222, 99, 0.6);
+  box-shadow: 0 0 15px rgba(251, 198, 0, 0.6);
   margin: 20px auto;
-  color: #ffde63;
+  font-style: normal;
+  border-color: #78ce53;
 }
 
 img {
-  margin-top: 20px;
-  border-radius: 25px;
+  width: 100;
+  height: 100px;
 }
 
 .mini {
@@ -122,13 +165,6 @@ h3{
   z-index: 9999;
 }
 
-        
-.star1 { top: 15%; left: 10%; animation-delay: 0s; }
-.star2 { top: 25%; right: 15%; animation-delay: 1s; }
-.star3 { top: 60%; left: 5%; animation-delay: 2s; }
-.star4 { top: 80%; right: 20%; animation-delay: 0.5s; }
-.heart1 { top: 35%; left: 85%; animation-delay: 1.5s; }
-.heart2 { top: 70%; right: 10%; animation-delay: 2.5s; }
 
 @keyframes float {
   0%   { transform: translateY(0); }
@@ -142,3 +178,70 @@ h3{
 .star4 { top: 80%; right: 20%; animation-delay: 0.5s; }
 .heart1 { top: 35%; left: 85%; animation-delay: 1.5s; }
 .heart2 { top: 70%; right: 10%; animation-delay: 2.5s; }
+
+/* Style général du footer */
+.custom-footer {
+  background-color: #c1f2b0; /* vert */
+  border: 5px, dashed, #78ce53;
+  padding: 20px 0;
+  color: #fff;
+  text-align: bottom;
+  font-family: 'Coiny', cursive;
+  margin-top: 50px;
+}
+
+/* Contenu pour aligner les éléments */
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style des icônes et textes */
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgba(255,255,255,0.8);
+}
+
+/* Icônes */
+.icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* Texte à côté des icônes */
+.label {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+/* Style des icônes des stores d'applications */
+.app-stores {
+  display: flex;
+  gap: 30px;
+}
+
+.app-stores a .icon {
+  width: 50px;
+  height: 50px;
+}
+
